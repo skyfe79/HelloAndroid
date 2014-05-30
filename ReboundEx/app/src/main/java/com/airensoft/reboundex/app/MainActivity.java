@@ -10,6 +10,7 @@ import com.facebook.rebound.SpringSystem;
 import com.facebook.rebound.SpringUtil;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -66,5 +67,12 @@ public class MainActivity extends ActionBarActivity {
             mTextView.setScaleY(mappedValue);
             mTextView.setScaleX(mappedValue);
         }
+    }
+
+
+
+    @Click(R.id.mOrigamiEx)
+    public void onClickOrigamiEx() {
+        OrigamiExActivity_.intent(this).start();
     }
 }
